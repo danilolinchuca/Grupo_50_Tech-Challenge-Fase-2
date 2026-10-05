@@ -4,8 +4,8 @@ Rode esta lista antes de submeter.
 
 ## Acesso (causa nº 1 de problema na entrega)
 
-- [ ] Repositório **público** — confirmar em janela anônima
-- [ ] Vídeo abre sem pedir permissão — confirmar em janela anônima
+- [x] Repositório **público** — confirmado em janela anônima
+- [x] Vídeo abre sem pedir permissão — confirmado em janela anônima
 - [x] Apresentação abre e está em PDF
 
 ## Repositório
@@ -40,12 +40,12 @@ Rode esta lista antes de submeter.
 
 - [x] Apresentação em `docs/apresentacao_executiva.pdf`
 - [x] Storytelling conecta os insights — não é uma sequência de gráficos
-- [ ] Vídeo com **≤ 5 minutos** — confirmar duração final
-- [ ] Ao menos um integrante aparece ou narra — confirmar no vídeo final
+- [x] Vídeo com **≤ 5 minutos** — duração confirmada: 4:31
+- [x] Ao menos um integrante aparece ou narra — narração confirmada
 - [x] Linguagem executiva, sem jargão técnico
 
 ## Submissão
 
-- [ ] PDF com os três links gerado
-- [ ] Links do PDF idênticos aos do README — conferir o PDF final
+- [x] PDF com os três links gerado
+- [x] Links do PDF idênticos aos do README — conferidos
 - [ ] PDF enviado na plataforma
