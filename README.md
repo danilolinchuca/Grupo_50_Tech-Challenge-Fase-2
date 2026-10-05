@@ -31,8 +31,7 @@ Estes três links são **obrigatórios** e devem ser idênticos aos do PDF de su
 |---|---|
 | Repositório | https://github.com/danilolinchuca/Grupo_50_Tech-Challenge-Fase-2 |
 | Vídeo executivo (≤ 5 min) | https://drive.google.com/file/d/1cdHyayVz_2fk-qB6ZKLkYYOA2WKRUfGR/view?usp=sharing |
-| Apresentação | https://github.com/danilolinchuca/Grupo_50_Tech-Challenge-Fase-2/blob/main/docs/Grupo%2050%20-%20Tech%20Challenge%20Fase%202.pdf |
-
+| Apresentação | https://github.com/danilolinchuca/Grupo_50_Tech-Challenge-Fase-2/blob/main/docs/apresentacao_executiva.pdf |
 
 ---
 
