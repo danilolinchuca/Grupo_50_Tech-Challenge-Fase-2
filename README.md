@@ -103,7 +103,7 @@ Depois execute os notebooks nesta ordem:
 | # | Notebook | O que faz |
 |---|---|---|
 | 1 | `notebooks/01_eda.ipynb` | Análise exploratória |
-| 2 | `notebooks/02_preprocessamento.ipynb` | Limpeza, escala e feature engineering |
+| 2 | `notebooks/02_preprocessamento.ipynb` | Limpeza, transformação e preparação dos dados |
 | 3 | `notebooks/03_modelagem.ipynb` | Treino e comparação dos modelos |
 | 4 | `notebooks/04_avaliacao.ipynb` | Métricas, importância de variáveis e conclusões |
 
@@ -116,11 +116,11 @@ A divisão dos dados utiliza agrupamento por perfil cadastral, evitando que regi
 
 | Modelo | Acurácia | Precisão | Recall | F1 | AUC-ROC |
 |---|---|---|---|---|---|
-| KNN | 96,34% | 2,50% | 3,57% | 2,94% | 0,5069 |
-| Regressão Logística | 62,79% | 1,21% | 28,57% | 2,33% | 0,5115 |
-| Random Forest | 96,04% | 1,49% | 2,38% | 1,83% | 0,5153 |
+| KNN | 96,50% | 1,98% | 2,20% | 2,08% | 0,5016 |
+| Regressão Logística | 62,31% | 1,60% | 35,16% | 3,07% | 0,5065 |
+| Random Forest | 94,93% | 4,52% | 9,89% | 6,21% | 0,6109 |
 
-**Modelo escolhido:** KNN — selecionado pelo maior F1-Score para a classe de maus pagadores (`TARGET = 1`), com F1 de 2,94%.
+**Modelo escolhido:** Random Forest — selecionado pelo maior F1-Score para a classe de maus pagadores (`TARGET = 1`), com F1 de 6,21%.
 
 **Métricas priorizadas:** F1-Score da classe de maus pagadores, por combinar precisão e recall em um cenário de forte desbalanceamento. A AUC-ROC e o Recall também foram analisados para complementar a avaliação.
 
@@ -130,20 +130,29 @@ A divisão final resultou em:
 
 | Conjunto | Registros | Maus pagadores |
 |---|---:|---:|
-| Treino | 25.816 | 439 (1,70%) |
-| Validação | 5.231 | 93 (1,78%) |
-| Teste | 5.410 | 84 (1,55%) |
+| Treino | 25.743 | 427 (1,66%) |
+| Validação | 5.347 | 98 (1,83%) |
+| Teste | 5.367 | 91 (1,70%) |
 
 O diagnóstico confirmou zero sobreposição de perfis entre os conjuntos.
+
+No conjunto de teste, o Random Forest obteve a seguinte matriz de confusão:
+
+| | Predito bom | Predito mau |
+|---|---:|---:|
+| **Real bom** | 5.086 | 190 |
+| **Real mau** | 82 | 9 |
+
+Assim, o modelo identificou corretamente 9 dos 91 maus pagadores do conjunto de teste e classificou 190 bons pagadores como maus.
 
 ---
 
 ## 6. Principais conclusões
 
 1. A divisão por grupos de perfil cadastral evita que o mesmo perfil esteja simultaneamente em treino, validação e teste, proporcionando uma avaliação mais conservadora da generalização para perfis não vistos.
-2. O KNN foi selecionado pelo critério definido no projeto, apresentando o maior F1 para a classe de maus pagadores. A Regressão Logística apresentou o maior Recall e o Random Forest a maior AUC-ROC.
-3. As AUCs próximas de 0,50 indicam capacidade discriminativa limitada na configuração avaliada, e a acurácia deve ser interpretada com cautela devido ao desbalanceamento da base.
-4. No Random Forest, `AGE_YEARS`, `EMPLOYED_YEARS` e `AMT_INCOME_TOTAL` foram as variáveis com maior importância observada. Essa importância representa contribuição para o comportamento do modelo e não implica causalidade.
+2. O Random Forest foi selecionado pelo critério definido no projeto, apresentando o maior F1 para a classe de maus pagadores. A Regressão Logística apresentou o maior Recall, enquanto o Random Forest também apresentou a maior AUC-ROC.
+3. O Random Forest apresentou AUC-ROC de 0,6109, indicando capacidade discriminativa superior à dos demais modelos avaliados, embora ainda limitada. A acurácia deve ser interpretada com cautela devido ao forte desbalanceamento da base.
+4. No Random Forest, `AGE_YEARS`, `EMPLOYED_YEARS` e `AMT_INCOME_TOTAL` foram as variáveis com maior importância observada, com importâncias de aproximadamente 0,1601, 0,1562 e 0,1316, respectivamente. Essa importância representa contribuição para o comportamento do modelo e não implica causalidade.
 
 ### Limitações e próximos passos
 
