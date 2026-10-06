@@ -40,7 +40,7 @@ Rode esta lista antes de submeter.
 
 - [x] Apresentação em `docs/apresentacao_executiva.pdf`
 - [x] Storytelling conecta os insights — não é uma sequência de gráficos
-- [x] Vídeo com **≤ 5 minutos** — duração confirmada: 4:31
+- [x] Vídeo com **≤ 5 minutos** — duração confirmada: 4:46
 - [x] Ao menos um integrante aparece ou narra — narração confirmada
 - [x] Linguagem executiva, sem jargão técnico
 
