@@ -1,13 +1,13 @@
 {
-  "turma": "12DTAT",
-  "grupo": "Grupo 00",
+  "turma": "2DTATBB",
+  "grupo": "Grupo 50",
   "integrantes": [
-    { "nome": "Nome Completo do Integrante", "rm": "RM000000" },
-    { "nome": "Nome Completo do Integrante", "rm": "RM000000" }
+    { "nome": "Danilo da Costa Linchuca", "rm": "RM377841" },
+    { "nome": "Fabio Andre Ribeiro Cortez", "rm": "RM377820" }
   ],
   "links": {
-    "repositorio": "https://github.com/usuario/nome-do-repositorio",
-    "video": "https://www.youtube.com/watch?v=xxxxxxxxxxx",
-    "apresentacao": "https://github.com/usuario/nome-do-repositorio/blob/main/docs/apresentacao_executiva.pdf"
+    "repositorio": "https://github.com/danilolinchuca/Grupo_50_Tech-Challenge-Fase-2",
+    "video": "https://drive.google.com/file/d/1UamaQHxyu2GxMRHGPqF3WVaSkaXU4gVr/view?usp=sharing",
+    "apresentacao": "https://github.com/danilolinchuca/Grupo_50_Tech-Challenge-Fase-2/blob/main/docs/apresentacao_executiva.pdf"
   }
 }
